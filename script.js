@@ -205,6 +205,7 @@ factorial();
     the string to be true each letter must be surrounded by a + smbol. The string to the left would be false.
     The string iwll not be empty and will have at lease one letter.
 */
+//Didn't work...
 
 var simpleSymbols = function(str) {
     for (var i = 0; i < str.length; i++){
@@ -214,3 +215,39 @@ var simpleSymbols = function(str) {
     }
 }
 simpleSymbols('+s+=+d+');
+
+/*
+    Week 3 Day 4 Toy Problem
+    Given an arbitrary input string, return the first non repeated caharacter in the string.
+    for example:
+    firstNonRepeatedCharacter('ABA') = b
+    firstNonRepeatedCharacter('AABCABD') = C
+*/
+
+var nonRepeat = function(str) {
+    for(var i = 0; i < str.length; i++){
+        if (str[i].indexOf(str[i], (i+1) === -1)) {
+            return str[i];
+        }
+        else{
+            return 'No non-repeating characters';
+        }
+    }
+}
+
+nonRepeat('AABCABD')
+
+/*
+Write a funciton called ABCheck that takes a string parameter and returns the string true if the characters a and b are separated by exactly 3 places
+anywhere in the string and at least once (ie. 'lane borrowed' would result in true because there is exactly three characters between a and b).
+Otherwise return the string false
+*/
+var abcheck = function(str) {
+        for (var i = 0; i < str.length; i++) {
+            if (str.charAt(i) === 'a' && str.charAt(i + 4) === 'b') {
+                return true;
+            }
+        }
+        return false;
+};
+abcheck('lane borrowed');
