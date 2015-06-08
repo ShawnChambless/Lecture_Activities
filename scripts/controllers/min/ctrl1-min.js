@@ -1,0 +1,1 @@
+angular.module("routingPractice").controller("ctrl1",function(o,l){console.log(l)});

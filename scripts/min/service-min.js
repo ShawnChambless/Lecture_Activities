@@ -1,0 +1,1 @@
+app=angular.module("routingPractice"),app.service("mainService",function(e){var r={name:"Shawn"};this.getUser=function(){var a=e.defer();return a.resolve(r),a.promise}});
