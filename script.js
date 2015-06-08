@@ -233,7 +233,7 @@ var nonRepeat = function(str) {
             return 'No non-repeating characters';
         }
     }
-}
+};
 
 nonRepeat('AABCABD')
 
@@ -244,7 +244,7 @@ Otherwise return the string false
 */
 var abcheck = function(str) {
         for (var i = 0; i < str.length; i++) {
-            if (str.charAt(i) === 'a' && str.charAt(i + 4) === 'b') {
+            if (str.charAt(i) === 'a' && str.charAt(i + 4) === 'b' || str.charAt(i) === 'b' && str.charAt(i + 4) === 'a') {
                 return true;
             }
         }
