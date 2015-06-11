@@ -290,3 +290,18 @@ var fizz = function() {
     }
 }
 fizz();
+
+/*
+    Week 4 Day 4 toy Problem
+
+    Write a function that accepts a number, n, and returns the nth Fibonacci number. USe a recursive solution to this problem; if you finish with time left over, implement an iterative solution.
+*/
+
+var fib = function(num) {
+    if (num < 2) {
+        return n;
+    }else {
+        return (num - 2) + (num -1);
+    }
+}
+fib(5)
