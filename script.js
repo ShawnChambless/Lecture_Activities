@@ -299,9 +299,9 @@ fizz();
 
 var fib = function(num) {
     if (num < 2) {
-        return n;
+        return num;
     }else {
-        return (num - 2) + (num -1);
+        return fib(num - 2) + fib(num -1);
     }
 }
 fib(5)
