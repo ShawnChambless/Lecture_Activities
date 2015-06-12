@@ -305,3 +305,14 @@ var fib = function(num) {
     }
 }
 fib(5)
+
+// Week 4 day 5 toy problem
+//Make this work
+
+// function dan() {
+//     arguments.slice();
+// }
+// dan(1, 2, 3, 4)
+function dan() {
+    return Array.prototype.slice.call(arguments);
+}
