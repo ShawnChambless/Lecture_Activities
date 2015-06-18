@@ -316,3 +316,19 @@ fib(5)
 function dan() {
     return Array.prototype.slice.call(arguments);
 }
+
+// Week 5 day 4 toy problem
+// Write a function that will calculate whether or not a nubmer is a primer number.
+
+var prime = function(num) {
+    for(var i = 2; i < num / 2; i++) {
+        if (num % i === 0) {
+            console.log('Not a prime ' + num)
+        }
+        else {
+            console.log('Prime ' + num)
+        }
+    }
+
+}
+prime(15)
