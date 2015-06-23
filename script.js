@@ -332,3 +332,95 @@ var prime = function(num) {
 
 }
 prime(15)
+
+//Week 6 Day 1 toy problem
+var animals = [
+    {
+        name: 'Dog',
+        kingdom: 'Animalia',
+        phylum: 'Chordata',
+        class: 'Mammalia',
+        order: 'Carnivora',
+        family: 'Canidae',
+        species: 'Canis lupus'
+    },
+    {
+        name: 'Cat',
+        kingdom: 'Animalia',
+        phylum: 'Chordata',
+        class: 'Mammalia',
+        order: 'Carnivora',
+        family: 'Felidae',
+        species: 'Felis catus'
+    },
+    {
+        name: 'Hippopotamus',
+        kingdom: 'Animalia',
+        phylum: 'Chordata',
+        class: 'Mammalia',
+        order: 'Artiodactyla',
+        family: 'Hippopotamidae',
+        species: 'Hippopotamus amphibius'
+    },
+    {
+        name: 'Playtpus',
+        kingdom: 'Animalia',
+        phylum: 'Chordata',
+        class: 'Mammalia',
+        order: 'Monotremata',
+        family: 'Ornithorhynchidae',
+        species: 'Ornithorhynchus anatinus'
+    },
+    {
+        name: 'Lizard',
+        kingdom: 'Animalia',
+        phylum: 'Chordata',
+        class: 'Reptilia',
+        order: 'Squamata',
+        family: 'Agamidae',
+        species: 'Pogona vitticeps'
+    },
+    {
+        name: 'Blackbird',
+        kingdom: 'Animalia',
+        phylum: 'Chordata',
+        class: 'Aves',
+        order: 'Passeriformes',
+        family: 'Turdidae',
+        species: 'Turdus merula'
+    }
+];
+
+
+
+//given the above object, write a function that returns an object whose keys are the fields found above and whose values are objects containing all the values as keys and a count for how many times that value occurs
+
+//e.g.
+//{
+//    kingdom: {Animalia: 6}
+//    phylum: {Chordata: 6},
+//    class: {Mammalia: 4, Reptilia: 1, Aves: 1}
+//}
+var looper = function(obj) {
+    var otherAnimals = {
+        kindom: {};
+        phylum: {};
+        class: {};
+        order: {};
+        family: {};
+        species: {};
+    };
+    for (var i = 0; i < obj.length; i++) {
+        var item = arr[i];
+        for(var prop in item) {
+            if(obj[prop][item[prop]]) {
+                obj[prop][item[prop]]++;
+            }
+            else{
+                obj[prop][item[prop]] = 1;
+            }
+        }
+    }
+        return otherAnimals;
+}
+looper(animals)
