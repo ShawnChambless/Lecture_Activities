@@ -423,4 +423,44 @@ var looper = function(obj) {
     }
         return otherAnimals;
 }
-looper(animals)
+looper(animals);
+
+
+/*
+Create a function that will take in an array of random numbers and sort them from least to greatest.
+You are not alloweed to user Array.prototype.sort()
+*/
+// var arr = [2, 3, 5, 1, 6, 2];
+// var sorter = function(arr) {
+//     for (var i = 0; i < arr.length; i++) {
+//         if(arr[i] < arr[i-1]) {
+//             arr.push(i[i], i);
+//         }
+//     }
+//     return arr;
+//
+// }
+// sorter(arr);
+
+/*
+* Week 6 day 4 toy problem
+* Write a function that takes in an array of numbers. Have the function return a new array with each number *being tripled.
+*/
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var tripler = function(arr) {
+    var newArr = [];
+    for(var i = 0; i < arr.length; i++) {
+        newArr.push(arr[i] * 3);
+    }
+    return newArr;
+};
+tripler(arr);
+
+//Same problem done with arr.map
+var mapper = function(arr) {
+    arr.map(function(num) {
+        console.log(num*3);
+    });
+
+};
+mapper(arr);
