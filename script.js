@@ -464,3 +464,12 @@ var mapper = function(arr) {
 
 };
 mapper(arr);
+
+// Week 8 day 1 toy problem
+// Write a fnction that can only be invoked once
+// Rob's solution, mine ran as many times as you wanted, but only once for each invokation.
+var once  = function() {
+    once = null;
+    console.log('Ran');
+};
+once();
