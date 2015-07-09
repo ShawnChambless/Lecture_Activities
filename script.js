@@ -473,3 +473,16 @@ var once  = function() {
     console.log('Ran');
 };
 once();
+
+// Week 8 day 4 toy problem
+// Write a function that takes in a number, and returns true if the number is a prime number, and false if it is not a prime number.
+
+var prime = function(num) {
+        if (num % 2 === 0) {
+            return false;
+        }
+        else {
+            return true;
+        }
+}
+prime(15)
