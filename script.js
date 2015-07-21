@@ -476,13 +476,68 @@ once();
 
 // Week 8 day 4 toy problem
 // Write a function that takes in a number, and returns true if the number is a prime number, and false if it is not a prime number.
+// Extra credit: Write a function that will generate an array of all prime numbers between a specified range
 
 var prime = function(num) {
-        if (num % 2 === 0) {
+        if (num % 2 === 0 || num % 2 === 0 || num % 5 === 0 || num % 7 === 0 || num % 9 === 0) {
             return false;
+        }
+        else if (num === 2 || num === 3) {
+            return true;
         }
         else {
             return true;
         }
 }
 prime(15)
+
+var generator = function(min, max) {
+    var genArr = [];
+    for(var i = min; i <= max; i++) {
+        if(i % 2 !== 0 || i % 2 !== 0 || i % 5 !== 0 || i % 7 !== 0 || i % 9 !== 0) {
+            genArr.push(i);
+        }
+        else if (i === 2 ||i === 3 || i === 5) {
+            genArr.push(i);
+        }
+    };
+    return genArr;
+};
+generator(2, 900);
+
+/*
+    Week 10 day 2 toy problems
+
+Write a function that accepts a function to timeout, 'x', in number of millisecontds. It will return a new function that can only be executed once per timeout period, and if the function is invoked during the timerout period, the timeout period restarts. This is useful for functions that can be need to be blocked on subsequent attempts overt short period of times. One such example, is cliks on a button. Once written add a third parameter that will allow the function to be executed immmediately if set to true. Otherwise the function will run at the end of the timeout period.
+*/
+
+function timeOut(func, x, bool) {
+    function setTimeout({
+        func();
+    }, x);
+    if(bool) {
+        func();
+    }
+};
+
+/*
+    Write a function that takes an array of integers and returns the sum of the integers after addding one to each
+*/
+var plusOneSum = [1, 2, 3, 4];
+function sum(arr) {
+    var result = 0;
+    for(var i = 0; i < arr.length; i++) {
+        result += arr[i] + 1;
+    };
+    return result;
+};
+sum(plusOneSum);
+
+// or ===============================================
+
+function plusMap(nums) {
+    return (1 + nums.reduce(function (prev, curr, i) {
+        return prev + curr + 1;
+    }));
+};]
+plusMap(plusOneSum);
